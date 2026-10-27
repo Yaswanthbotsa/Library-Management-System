@@ -1,0 +1,79 @@
+<!--{% load static %}-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Library Rental System</title>-->
+
+<!--    <link rel="stylesheet" href="{% static 'css/style.css' %}">-->
+<!--</head>-->
+<!--<body>-->
+
+<!--    <nav class="navbar">-->
+<!--        <h2>Library Rental System</h2>-->
+
+
+<!--        <div>-->
+<!--            <a href="{% url 'Home' %}">Home</a>-->
+<!--            <a href="{% url 'bookrental' %}">Rentals</a>-->
+<!--            <a href="{% url 'Add_rental' %}">Add Rental</a>-->
+<!--        </div>-->
+<!--    </nav>-->
+<!--    <br>-->
+<!--    <br>-->
+
+
+
+
+<!--    <main class="container">-->
+
+<!--    </main>-->
+
+<!--    <footer>-->
+<!--        <p>© 2026 Library Rental System</p>-->
+<!--    </footer>-->
+
+<!--    <script src="{% static 'js/script.js' %}"></script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Library Rental System{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>Library Rental System</h2>
+
+        <div>
+            <a href="{% url 'Home' %}">Home</a>
+            <a href="{% url 'bookrental' %}">Rentals</a>
+            <a href="{% url 'Add_rental' %}">Add Rental</a>
+        </div>
+    </nav>
+    <br>
+    <br>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© Library Rental System</p>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

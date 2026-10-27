@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Book Rental List</h1>
+
+<div class="card">
+
+    {% for RBook in RBooks %}
+        <div class="book-item">
+            <a href="{% url 'rental_detail' RBook.id %}">
+                {{RBook.book_title}}
+            </a>
+        </div>
+    {% empty %}
+        <p>No rentals found.</p>
+    {% endfor %}
+
+    <br>
+
+    <a href="{% url 'Add_rental' %}" class="btn">
+        Add rental
+    </a>
+
+</div>
+
+{% endblock %}

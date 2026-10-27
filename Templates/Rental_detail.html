@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Rental Details</h1>
+
+<div class="detail-card">
+
+    <p><strong>Book Title:</strong> {{bookrental.book_title}}</p>
+    <p><strong>Author:</strong> {{bookrental.author_name}}</p>
+    <p><strong>Borrower:</strong> {{bookrental.borrower_name}}</p>
+    <p><strong>Email:</strong> {{bookrental.borrower_email}}</p>
+    <p><strong>Rental Date:</strong> {{bookrental.rental_date}}</p>
+    <p><strong>Return Date:</strong> {{bookrental.return_date}}</p>
+    <p><strong>Status:</strong> {{bookrental.status}}</p>
+    <p><strong>Fine Amount:</strong> {{bookrental.fine_amount}}</p>
+    <p><strong>Created:</strong> {{bookrental.created_at}}</p>
+    <p><strong>Updated:</strong> {{bookrental.updated_at}}</p>
+
+    <div class="btn-group">
+        <a href="{% url 'Update_rental' bookrental.id %}" class="btn">
+            Edit
+        </a>
+
+        <a href="{% url 'Delete_rental' bookrental.id %}" class="btn danger">
+            Delete
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}

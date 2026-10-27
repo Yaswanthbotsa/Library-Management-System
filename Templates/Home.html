@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="home-hero">
+    <h1>Welcome to Library Rental System</h1>
+    <p>Manage book rentals quickly and efficiently.</p>
+
+    <a href="{% url 'bookrental' %}" class="btn">
+        View Rentals
+    </a>
+</section>
+{% endblock %}
